@@ -12,6 +12,9 @@
 .setting,
 .logout,
 .down {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-left: 3rem;
 }
 .upload-container {
