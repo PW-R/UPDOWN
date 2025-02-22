@@ -14,3 +14,8 @@
     height: 100vh;
     background-color: #F6DCDE
 }
+.pfp, .down {
+    display: flex;
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    gap: 10px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+}
