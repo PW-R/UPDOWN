@@ -1,0 +1,91 @@
+.download-container {
+    display: flex;
+    justify-content: space-between;
+    height: 1024px;
+    background-color: #f6dcde;
+}
+
+.leftside {
+    width: 359px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: #fff;
+}
+
+.download-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+.download-profile,
+.download,
+.download-setting,
+.download-logout  {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.download-profile p,
+.download p,
+.download-setting p,
+.download-logout p {
+    margin: 0; /* ลบ padding/margin ที่อาจทำให้การจัดวางผิดเพี้ยน */
+    text-align: left; /* ชิดซ้าย */
+    flex: 1; /* ให้ p ใช้พื้นที่ที่เหลือเพื่อดันตัวเองไปชิดซ้าย */
+}
+  
+.rightside {
+    width: 1081px;
+    height: 1024px;
+}
+  
+.download-top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 0 2rem 0 2rem;
+}
+
+.download-showfile {
+    width: 992px;
+    height: 251px;
+    background-color: #F9BEC3;
+    border-radius:20px ;
+    margin: 2rem;
+}
+
+.download-3button {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    padding: 1rem;
+}
+
+.download-3button button {
+    cursor: pointer;
+    border: 0px ;
+    background-color: transparent;
+}
+
+.download-2button {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-right: 55px;
+}
+
+.download-2button button {
+    width: 120px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px;
+}
