@@ -8,8 +8,8 @@
 }
 
 .right{
-  width: 1081;
-  height: 1024;
+  width: 1081px;
+  height: 1024px;
 }
 
 .top{
@@ -29,12 +29,9 @@
   margin-left: 3rem;
 }
 
-
-
 .upload-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: 100vh;
   background-color: #f6dcde;
 }
