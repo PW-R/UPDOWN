@@ -6,6 +6,17 @@
   align-items: left;
   background-color: #fff;
 }
+
+.right{
+  width: 1081;
+  height: 1024;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+}
+
 .logo,
 .pfp,
 .up,
@@ -17,15 +28,17 @@
   gap: 10px;
   margin-left: 3rem;
 }
+
+.pfp, .down {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+}
+
 .upload-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
   background-color: #f6dcde;
-}
-.pfp, .down {
-    display: flex;
-    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
-    gap: 10px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
 }
