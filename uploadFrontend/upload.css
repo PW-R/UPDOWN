@@ -80,7 +80,33 @@
     height: 1024px;
     background-color: #f6dcde;
   }
-  /* th {
-    padding: 10px 85px; 
-    text-align: center; 
-  } */
+
+
+  .left {
+    width: 359px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* เปลี่ยนจาก left เป็น flex-start */
+    background-color: #fff;
+    padding-top: 2rem;
+
+}
+
+.nav-item {
+  text-decoration: none;
+  color: black; 
+}
+
+.nav-item svg {
+    width: 30px; 
+    height: 24px;
+    
+
+}
+ .bi-person-circle{
+  top: 10px; /* ปรับระยะห่างจากด้านบน */
+  font-size: 40px; /* ปรับขนาดไอคอน */
+}
+
+  
