@@ -29,7 +29,18 @@
     align-items: center;
     gap: 10px;
     margin-left: 3rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 18px;
   }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    text-decoration: none;
+    font-weight: bold;
+}
 
   #addfile{
     width: 143px;
@@ -54,6 +65,13 @@
     background-color: #FFF;
     border-radius: 10px;
     margin: 2rem;
+  }
+
+  .pfp button{
+    width: 200px;
+    height: 56px;
+    border: none;
+    background-color: #fff;
   }
 
   .upload-container {
