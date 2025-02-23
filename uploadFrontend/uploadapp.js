@@ -1,9 +1,14 @@
-async function uploadFile() {
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("fileInput");
+});
+
+async function addFile() {
     const fileInput = document.getElementById("fileInput");
     const file = fileInput.files[0];
 
     if (!file) {
         alert("กรุณาเลือกไฟล์ก่อน!");
+        console.error("❌ ไม่พบ element fileInput");
         return;
     }
 

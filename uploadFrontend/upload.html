@@ -66,9 +66,7 @@
                 <p>SETTING</p>
             </a>
             </div>
-
-            <div class="logout" >
-                <a href="#" class="nav-item">
+            <div class="logout">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-door-closed" viewBox="0 0 16 16">
                     <path
@@ -82,10 +80,12 @@
         <div class="right">
             <div class="top">
                 <h2>UPLOAD</h2>
-                <button id="addfile" onclick="addFile()" >NEW</button>
+                <button  onclick="addFile()" >UPLOAD</button>
             </div>
             <div class="middle">
-                <div class="showfile"></div>
+                <div class="showfile">
+                    <input type="file" id="fileInput">
+                </div>
             </div>
             <div class="listfile">
                 <div class="list">
@@ -111,7 +111,5 @@
         </div>
     </div>
 
-
     <script src="uploadapp.js"></script>
-
 </body>
