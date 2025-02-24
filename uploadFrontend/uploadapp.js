@@ -25,7 +25,7 @@ async function addFile() {
       console.log("JSON result:", result);
       if (result.fileUrl) {
         console.log("File URL received:", result.fileUrl);
-        displayFile(result.fileUrl, file.type);
+        displayFile(result.fileUrl, file.type)
       }
     } catch (jsonError) {
       console.error(" Invalid JSON response:", text);
@@ -80,8 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
       fileInput.files = files;
       addFile();
     }
-  });
-  fileInput.addEventListener("change", () => {
-    addFile();
-  });
+});
+fileInput.addEventListener("change", () => {
+ 
+});
 });
