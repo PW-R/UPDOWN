@@ -53,50 +53,63 @@
     padding: 0 2rem 0 2rem;
 }
 
+/* พื้นที่แสดงไฟล์ */
 .download-showfile {
     width: 992px;
     height: 500px;
     background-color: #F9BEC3;
-    border-radius:20px ;
+    border-radius: 20px;
     margin: 2rem;
+    overflow-y: auto; 
+    padding-right: 10px; 
 }
-
+/* ปรับแต่ง Scrollbar  */
+.download-showfile::-webkit-scrollbar {
+    width: 6px; 
+}
+.download-showfile::-webkit-scrollbar-thumb {
+    background-color: black; 
+    border-radius: 5px;
+}
+.download-showfile::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); 
+}
+/* SELECT / ALL / CANCEL */
 .download-3button {
     display: flex;
     justify-content: right;
     gap: 10px;
     padding: 1rem;
 }
-
 .download-3button button {
     cursor: pointer;
     border: 0px ;
     background-color: transparent;
 }
-
+/* table */
 .download-table {
     margin: 0 2rem 1rem 2rem;
 }
-
 .download-table table {
     width: 922px;
     border-spacing: 0 10px;
     border-collapse: separate;
 }
-
 .download-table table td {
+    display: flex;
+    justify-content: space-between; /* ดัน checkbox ไปขวาสุด */
+    align-items: center;
     background-color: #fff;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 20px;
 }
-
+/* DOWNLOAD / DELETE */
 .download-2button {
     display: flex;
     justify-content: right;
     gap: 10px;
     margin-right: 55px;
 }
-
 .download-2button button {
     width: 120px;
     border: 1px solid black;
@@ -105,3 +118,4 @@
     cursor: pointer;
     padding: 5px;
 }
+
