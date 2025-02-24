@@ -22,7 +22,7 @@ async function addFile() {
 
         try {
             const result = JSON.parse(text);  // Try parsing it as JSON
-            document.getElementById("status").innerText = result.message;
+            console.log("JSON result:", result);
             if (result.fileUrl) {
                 console.log("File URL received:", result.fileUrl);
                 displayFile(result.fileUrl, file.type);
