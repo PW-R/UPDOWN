@@ -67,44 +67,55 @@
                 </a>
             </div>
             <div class="logout">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-door-closed" viewBox="0 0 16 16">
-                    <path
-                        d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3zm1 13h8V2H4z" />
-                    <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0" />
-                </svg>
-                <p>LOGOUT</p>
+                <a href="#" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-door-closed" viewBox="0 0 16 16">
+                        <path
+                            d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3zm1 13h8V2H4z" />
+                        <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0" />
+                    </svg>
+                    <p>LOGOUT</p>
                 </a>
             </div>
         </div>
         <div class="right">
             <div class="top">
                 <h2>UPLOAD</h2>
-                <button onclick="addFile()">UPLOAD</button>
+                <button onclick="addFile()" id="upload">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                    </svg> &nbsp;
+                    UPLOAD
+                </button>
                 <p id="status"></p>
-                
+
             </div>
             <div class="middle">
                 <div class="showfile">
-                    <input class="form-control" type="file" id="formFile"> 
+                    <input class="form-control" type="file" id="formFile" >
                     <div id="fileDisplay"></div>
                 </div>
             </div>
             <div class="listfile">
                 <div class="list">
-                    <table>
+                    <table class="table table-striped" style="text-align: center;">
                         <thead>
-                            <tr>
-                                <th>0</th>
-
+                            <tr >
+                                <th>No.</th>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Time</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>

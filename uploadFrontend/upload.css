@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem;
   }
 
   .logo,
@@ -74,14 +74,8 @@
     background-color: #fff;
   }
 
-  .upload-container {
-    display: flex;
-    justify-content: space-between;
-    height: 1024px;
-    background-color: #f6dcde;
-  }
-
-
+  
+  
   .left {
     width: 359px;
     height: 100%;
@@ -90,23 +84,50 @@
     align-items: flex-start; /* เปลี่ยนจาก left เป็น flex-start */
     background-color: #fff;
     padding-top: 2rem;
-
-}
-
-.nav-item {
-  text-decoration: none;
-  color: black; 
+    
+  }
+  
+  .nav-item {
+    text-decoration: none;
+  color: #3D3D3D; 
 }
 
 .nav-item svg {
-    width: 30px; 
-    height: 24px;
-    
-
-}
- .bi-person-circle{
-  top: 10px; /* ปรับระยะห่างจากด้านบน */
-  font-size: 40px; /* ปรับขนาดไอคอน */
-}
-
+  width: 30px; 
+  height: 24px;
   
+  
+}
+.bi-person-circle{
+  top: 10px;
+  font-size: 40px;
+}
+
+#upload{
+  height: 55px;
+  width: 155px;
+  border: 3px solid #F9BEC3;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3D3D3D;
+  background-color: #FFFDEC;
+}
+
+#upload:hover{
+  background-color: #F37199;
+  border: 3px solid #F37199;
+  color: #FFFDEC;
+}
+
+a:hover{
+  color: #DE3163;
+}
+
+.upload-container {
+  display: flex;
+  justify-content: space-between;
+  height: 1024px;
+  color: #3D3D3D;
+  background-color: #f6dcde;
+}

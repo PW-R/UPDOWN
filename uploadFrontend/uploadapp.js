@@ -44,7 +44,7 @@ function displayFile(url, fileType) {
     console.log("Displaying file:", url, fileType); // Debugging
 
     if (fileType.startsWith("image/")) {
-        fileDisplay.innerHTML = `<img src="${url}" alt="Uploaded Image" width="200">`;
+        fileDisplay.innerHTML = `<img src="${url}" alt="Uploaded Image" width="auto">`;
     } else if (fileType.startsWith("video/")) {
         fileDisplay.innerHTML = `<video src="${url}" width="300" controls></video>`;
     } else if (fileType.startsWith("audio/")) {
@@ -55,3 +55,5 @@ function displayFile(url, fileType) {
         fileDisplay.innerHTML = `<a href="${url}" target="_blank">Download File</a>`;
     }
 }
+
+
