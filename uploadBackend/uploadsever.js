@@ -13,9 +13,8 @@ if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir);
 }
 
-// Set up file storage
 const storage = multer.diskStorage({
-    destination: "uploads/", // Save files in "uploads" folder
+    destination: "uploads/",
     filename: (req, file, cb) => {
         cb(null, Date.now() + path.extname(file.originalname)); // Unique filename
     },

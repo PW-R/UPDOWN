@@ -39,14 +39,14 @@ async function addFile() {
 
 function displayFile(url, fileType) {
     const fileDisplay = document.getElementById("fileDisplay");
-    fileDisplay.innerHTML = ""; // Clear previous file
+    fileDisplay.innerHTML = "";
 
     console.log("Displaying file:", url, fileType); // Debugging
 
     if (fileType.startsWith("image/")) {
-        fileDisplay.innerHTML = `<img src="${url}" alt="Uploaded Image" width="auto">`;
+        fileDisplay.innerHTML = `<img src="${url}" alt="Uploaded Image" height="70%">`;
     } else if (fileType.startsWith("video/")) {
-        fileDisplay.innerHTML = `<video src="${url}" width="300" controls></video>`;
+        fileDisplay.innerHTML = `<video src="${url}" height="auto" controls></video>`;
     } else if (fileType.startsWith("audio/")) {
         fileDisplay.innerHTML = `<audio src="${url}" controls></audio>`;
     } else if (fileType === "application/pdf") {
