@@ -1,37 +1,40 @@
 import express from "express";
-import multer from "multer";
 import cors from "cors";
+import multer from "multer";
 import path from "path";
-
-
+import fs from "fs";
 
 const app = express();
-
 app.use(cors());
+app.use(express.json());
 
+const uploadDir = "uploads/";
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir);
+}
+
+// Set up file storage
 const storage = multer.diskStorage({
-  destination: "./uploads/",
-  filename: (req, file, cb) => {
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
-  },
+    destination: "uploads/", // Save files in "uploads" folder
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname)); // Unique filename
+    },
 });
 
-const upload = multer({
-  storage: storage,
-});
+const upload = multer({ storage });
 
-app.post("/upload",upload.single("file"), (req, res) => {
+// Serve uploaded files
+app.use("/uploads", express.static("uploads"));
+
+// Upload route
+app.post("/upload", upload.single("file"), (req, res) => {
     if (!req.file) {
-        return res.status(400).send("No file uploaded.");
-      }
-      res.send("File uploaded successfully.");
+        return res.status(400).json({ message: "File upload failed!" });
+    }
+
+    const fileUrl = `http://localhost:5000/uploads/${req.file.filename}`;
+    res.json({ message: "File uploaded successfully!", fileUrl });
 });
 
-const PORT = 5000;
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// Start server
+app.listen(5000, () => console.log("Server running on port 5000"));
