@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     height: 1024px;
+    color: #3d3d3d;
     background-color: #f6dcde;
 }
 
@@ -9,59 +10,73 @@
     width: 359px;
     height: 100%;
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
-    align-items: left;
     background-color: #fff;
+    padding-top: 2rem;
 }
 
-.download-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 3rem;
-    margin-top: 2rem;
+.rightside {
+    width: 1081px;
+    height: 1024px;
 }
+
+.download-top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+
+.download-logo,
 .download-profile,
 .upload-page,
 .download-setting,
 .download-logout  {
     display: flex;
+    width: 100%;
+    height: 55px;
     align-items: center;
+    text-align: center;
     gap: 10px;
-    margin-left: 3rem;
-    margin-top: 1rem;
-}
-
-.download-profile p,
-.upload-page p,
-.download-setting p,
-.download-logout p {
-    margin: 0; 
-    text-align: left; 
-    flex: 1; 
-}
-  
-.rightside {
-    width: 1081px;
-    height: 1024px;
-}
-  
-.download-top {
-    display: flex;
-    justify-content: space-between;
     margin-top: 2rem;
-    padding: 0 2rem 0 2rem;
+    font-weight: bold;
+    font-size: 18px;
+    color: #3d3d3d;
+    
 }
 
+.download-profile:hover,
+.upload-page:hover,
+.download-setting:hover,
+.download-logout:hover{
+  color: #fffdec;
+  background-color: #f37199;
+}
+
+.nav-download {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+.nav-download svg {
+    width: 30px;
+    height: 24px;
+}
+    
 /* พื้นที่แสดงไฟล์ */
 .download-showfile {
     width: 992px;
-    height: 500px;
-    background-color: #F9BEC3;
+    height: 550px;
+    background-color: #f9bec3;
     border-radius: 20px;
     margin: 2rem;
-    overflow-y: auto; 
-    padding-right: 10px; 
+    overflow: scroll;
 }
 /* ปรับแต่ง Scrollbar  */
 .download-showfile::-webkit-scrollbar {
@@ -111,11 +126,16 @@
     margin-right: 55px;
 }
 .download-2button button {
-    width: 120px;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: white;
-    cursor: pointer;
-    padding: 5px;
+    height: 55px;
+    width: 180px;
+    border: 3px solid #f9bec3;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3d3d3d;
+    background-color: #fffdec;
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }
