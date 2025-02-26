@@ -1,29 +1,29 @@
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import path from 'path';
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+const bodyParser = require('body-parser'); // ✅ Import body-parser
 
 const app = express();
 const PORT = process.env.PORT || 5002;
 
-// ใช้ middleware
+// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-// ให้ Express เสิร์ฟไฟล์จาก downloadFrontend
+// Serve static files from downloadFrontend
 app.use('/downloadFrontend', express.static(path.join(__dirname, '../downloadFrontend')));
 
-// เสิร์ฟ index.html
+// Serve index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Route สำหรับการล็อกอิน
+// Serve download.html
 app.get('/downloadFrontend/download.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'downloadFrontend', 'download.html'));
+    res.sendFile(path.join(__dirname, '../downloadFrontend', 'download.html')); // ✅ Fixed path
 });
 
-
+// Login route
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
     console.log(`Login attempt with username: ${username}, password: ${password}`);
@@ -49,7 +49,7 @@ app.post('/login', (req, res) => {
     }
 });
 
-// เริ่มเซิร์ฟเวอร์
+// Start server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
