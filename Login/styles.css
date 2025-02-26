@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    border: 1px solid #000;
+}
+
+.left-side {
+    flex: 1;
+    background: url("https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center;
+    background-size: cover;
+}
+
+.right-side {
+    width: 400px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+}
+
+
+/*---โลโก้ SPU--- */
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo-container h1 {
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+.logo-container p {
+    font-size: 14px;
+    color: #E9007F;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-box {
+    margin-bottom: 40px;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.options label {
+    color: #000;
+}
+
+.options input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #999;
+    margin-right: 5px;
+}
+
+.options a {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+.btn-signin,
+.btn-google {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-signin {
+    background-color: #007BFF;
+}
+
+.btn-google {
+    background-color: #000;
+}
+
+.signup {
+    font-size: 14px;
+    text-align: center;
+}
+
+.signup a {
+    color: #f30505;
+    text-decoration: none;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+    font-size: 14px;
+    color: #000;
+}
