@@ -1,0 +1,199 @@
+.download-container {
+    display: flex;
+    justify-content: space-between;
+    height: 1024px;
+    color: #3d3d3d;
+    background-color: #f6dcde;
+}
+
+.leftside {
+    width: 359px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #fff;
+    padding-top: 2rem;
+}
+
+.rightside {
+    width: 1081px;
+    height: 1024px;
+}
+
+.download-top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+
+.download-logo,
+.download-profile,
+.upload-page,
+.download-setting,
+.download-logout  {
+    display: flex;
+    width: 100%;
+    height: 55px;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 18px;
+    color: #3d3d3d;
+    
+}
+
+.download-profile:hover,
+.upload-page:hover,
+.download-setting:hover,
+.download-logout:hover{
+  color: #fffdec;
+  background-color: #f37199;
+}
+
+.nav-download {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+.nav-download svg {
+    width: 30px;
+    height: 24px;
+}
+    
+/* พื้นที่แสดงไฟล์ */
+.download-showfile {
+    width: 992px;
+    height: 550px;
+    background-color: #f9bec3;
+    border-radius: 20px;
+    margin: 2rem;
+    overflow: scroll;
+}
+/* ปรับแต่ง Scrollbar  */
+.download-showfile::-webkit-scrollbar {
+    width: 6px; 
+}
+.download-showfile::-webkit-scrollbar-thumb {
+    background-color: black; 
+    border-radius: 5px;
+}
+.download-showfile::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); 
+}
+/* SELECT / ALL / CANCEL */
+.download-3button {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    padding: 1rem;
+}
+.download-3button button {
+    cursor: pointer;
+    border: 0px ;
+    background-color: transparent;
+}
+/* table */
+.download-table {
+    margin: 0 2rem 1rem 2rem;
+}
+.download-table table {
+    width: 922px;
+    border-spacing: 0 10px;
+    border-collapse: separate;
+}
+.download-table table td {
+    display: flex;
+    justify-content: space-between; /* ดัน checkbox ไปขวาสุด */
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+/* DOWNLOAD / DELETE */
+.download-2button {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-right: 55px;
+}
+.download-2button button {
+    height: 55px;
+    width: 180px;
+    border: 3px solid #f9bec3;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3d3d3d;
+    background-color: #fffdec;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+  
+.left{
+    width: 359px;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      background-color: #fff;
+      padding-top: 2rem;
+  }
+  
+  
+  .up-profile,
+  .up-upload,
+  .up-setting,
+  .up-logout,
+  .up-download {
+    display: flex;
+    width: 100%;
+    height: 55px;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 18px;
+    color: #3d3d3d;
+  }
+  
+  
+  .up-profile:hover,
+  .up-upload:hover,
+  .up-setting:hover,
+  .up-logout:hover,
+  .up-download:hover {
+    color: #fffdec;
+    background-color: #f37199;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3d3d3d;
+    justify-content: flex-start;
+  }
+  
+  .nav-item svg {
+    width: 30px;
+    height: 24px;
+    vertical-align: middle;
+    display: inline-block;
+  }

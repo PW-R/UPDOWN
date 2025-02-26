@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - SPU</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left-side"></div>
+        <div class="right-side">
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/New_logo_spu_%28Converted%29.png" alt="SPU Logo" style="max-width: 80%; height: auto;">
+            </div>
+            <!-- Login -->
+            <div class="form-box">
+                <label class="form-label" for="login-email">Log-in</label>
+                <input type="text" id="login-email" placeholder="Email or phone number">
+
+                <label class="form-label" for="login-password">Password</label>
+                <input type="password" id="login-password" placeholder="Enter password">
+
+                <div class="options">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button class="btn-signin" onclick="login()">Sign In</button>
+                <button class="btn-google">Sign in with google</button>
+
+                <p class="signup">Don’t have an account? <a href="#">Sign up now</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
+
+            console.log("Username:", username);  // แสดงข้อมูลที่ได้รับจากฟอร์ม
+            console.log("Password:", password);  // แสดงข้อมูลรหัสผ่าน
+
+            fetch("http://localhost:5002/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username, password }),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);  // แสดงข้อมูลที่ได้รับจาก API
+                    if (data.success) {
+                        alert(data.message);
+                        window.location.href = "/downloadFrontend/download.html";  // URL ที่เสิร์ฟไฟล์
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error:", error);  // แสดงข้อผิดพลาดในกรณีที่ fetch ล้มเหลว
+                });
+        }
+    </script>
+
+</body>
+
+</html>

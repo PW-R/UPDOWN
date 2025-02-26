@@ -1,0 +1,184 @@
+
+
+* {
+  box-sizing: border-box;
+  font-family: "Atkinson Hyperlegible Mono", serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%; /* หรือใช้ 100% สำหรับความกว้างที่เหมาะสม */
+  margin: 0;
+}
+
+
+
+.upload-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh; /* ใช้ความสูงของหน้าจอ */
+  color: #3d3d3d;
+  background-color: #f6dcde;
+  position: relative;
+}
+
+.left{
+  width: 359px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #fff;
+    padding-top: 2rem;
+}
+
+
+.up-profile,
+.up-upload,
+.up-setting,
+.up-logout,
+.up-download {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 18px;
+  color: #3d3d3d;
+}
+
+
+.up-profile:hover,
+.up-upload:hover,
+.up-setting:hover,
+.up-logout:hover,
+.up-download:hover {
+  color: #fffdec;
+  background-color: #f37199;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3d3d3d;
+  justify-content: flex-start;
+}
+
+.nav-item svg {
+  width: 30px;
+  height: 24px;
+  vertical-align: middle;
+  display: inline-block;
+}
+/* โปรไฟล์ */
+.bi-person-circle{
+  gap: 5px;
+  margin-top: -12%; 
+}
+/* ดาวโหลด */
+.bi-cloud-arrow-down{
+  gap: 5px;
+  margin-top: -12%; 
+}
+/* โฟลเดอร์ */
+.bi-folder{
+  gap: 5px;
+  margin-top: -12%; 
+}
+/* ตั้งค่า*/
+.bi-gear{
+  gap: 5px;
+  margin-top: -12%; 
+}
+/* ออกจากระบบ */
+.bi-door-closed{
+  gap: 5px;
+  margin-top: -12%; 
+}
+
+
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+#addfile {
+  border: 3px solid #ee9aa1;
+  border-radius: 20px;
+  font-size: 24px;
+  background-color: #fff;
+}
+#fileDisplay {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  /* ทำให้มีแถบเลื่อนเมื่อจำเป็น */
+}
+
+.rightshow {
+  margin-right: 10rem; /* เพิ่มช่องว่างด้านซ้าย */
+  
+}
+
+
+.showfile {
+  width: 900px;
+  height: 460px;
+  background-color: #f9bec3;
+  border-radius: 20px;
+  overflow: scroll;
+  margin: 2rem;
+  
+
+}
+.showfile::-webkit-scrollbar {
+  display: none;
+}
+
+
+.dropfile{
+  width: 250px;
+  height: 80px;
+  border: none;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fff;
+  color: #BDA9A9;
+}
+
+.dropfile:hover{
+  background-color: #e98888;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#upload {
+  height: 55px;
+  width: 155px;
+  border: 3px solid #f9bec3;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3d3d3d;
+  background-color: #fffdec;
+}
+#upload:hover {
+  background-color: #f37199;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
