@@ -1,37 +1,47 @@
-const express = require('express');
+import express from 'express';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import path from 'path';
+
 const app = express();
-const cors = require('cors');
-const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 5002;
 
 // ใช้ middleware
-app.use(cors());  // อนุญาตให้มีการเชื่อมต่อจาก frontend
-app.use(bodyParser.json());  // ใช้ body-parser เพื่อแปลงข้อมูล JSON
+app.use(cors());
+app.use(bodyParser.json());
+
+// ให้ Express เสิร์ฟไฟล์จาก downloadFrontend
+app.use('/downloadFrontend', express.static(path.join(__dirname, '../downloadFrontend')));
+
+// เสิร์ฟ index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // Route สำหรับการล็อกอิน
+app.get('/downloadFrontend/download.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'downloadFrontend', 'download.html'));
+});
+
+
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
+    console.log(`Login attempt with username: ${username}, password: ${password}`);
 
-    console.log(`Login attempt with username: ${username}, password: ${password}`);  // แจ้งเตือนใน console
-
-    // ตัวอย่างข้อมูลผู้ใช้ (สามารถเปลี่ยนเป็นฐานข้อมูลจริงได้)
     const users = [
         { username: 'admin', password: '123456', role: 'admin' },
         { username: 'user', password: 'password', role: 'user' }
     ];
 
-    // ค้นหาผู้ใช้จากข้อมูลที่ให้
     const user = users.find(user => user.username === username);
 
-    // ตรวจสอบการเข้าสู่ระบบ
     if (user && user.password === password) {
-        console.log(`Login successful for user: ${username} with role: ${user.role}`);  // แจ้งเตือนเมื่อล็อกอินสำเร็จ
         res.json({
             success: true,
             message: 'Login successful!',
             role: user.role,
         });
     } else {
-        console.log(`Login failed for user: ${username}. Invalid credentials.`);  // แจ้งเตือนเมื่อล็อกอินล้มเหลว
         res.json({
             success: false,
             message: 'Invalid username or password',
@@ -40,7 +50,6 @@ app.post('/login', (req, res) => {
 });
 
 // เริ่มเซิร์ฟเวอร์
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

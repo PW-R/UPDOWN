@@ -45,7 +45,7 @@
             console.log("Username:", username);  // แสดงข้อมูลที่ได้รับจากฟอร์ม
             console.log("Password:", password);  // แสดงข้อมูลรหัสผ่าน
 
-            fetch("http://localhost:5000/login", {
+            fetch("http://localhost:5002/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password }),
@@ -55,6 +55,7 @@
                     console.log(data);  // แสดงข้อมูลที่ได้รับจาก API
                     if (data.success) {
                         alert(data.message);
+                        window.location.href = "/downloadFrontend/download.html";  // URL ที่เสิร์ฟไฟล์
                     } else {
                         alert(data.message);
                     }
