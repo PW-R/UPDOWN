@@ -74,7 +74,10 @@ document.addEventListener('DOMContentLoaded', function () {
       fileDisplay.innerHTML = `<audio src="${fileUrl}" controls></audio>`;
     } else if (fileType === "application/pdf") {
       fileDisplay.innerHTML = `<iframe src="${fileUrl}" width="100%" height="500px"></iframe>`;
-    } else {
+    } else if (fileType === "text/plain") {
+      fileDisplay.innerHTML = `<iframe src="${fileUrl}" width="100%" height="500px"></iframe>`;
+    }
+    else {
       fileDisplay.innerHTML = `<p>Preview not available for this file type: ${file.name}</p>`;
     }
   }
@@ -125,9 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const files = event.dataTransfer.files;
     if (files.length > 0) {
-      fileInput.files = files; // Assign dropped files to fileInput
-      previewFile(files[0]); // Show preview
-      addFile(); // Upload the file
+      fileInput.files = files; 
+      previewFile(files[0]); 
+      addFile(); 
     }
   });
 
