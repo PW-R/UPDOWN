@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const selectFilesButton = document.querySelector(".dropfile");
 
   selectFilesButton.addEventListener("click", () => {
-    fileInput.click(); // When clicking button, open the file dialog
+    fileInput.click();
   });
 
   if (dropArea) {
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   function handleSelectFilesClick() {
     console.log("Select Files button clicked");
-    fileInput.click(); // เปิด dialog สำหรับเลือกไฟล์
+    fileInput.click(); 
   }
 // ฟังก์ชันที่ใช้รีเซ็ตเมื่อกด Cancel
   cancelButton.addEventListener("click", () => {
@@ -156,8 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fileDisplay.innerHTML = '<button class="dropfile" style="margin-top: 12rem;">Select Files</button>';
     // แสดงปุ่ม Select Files
     selectFilesButton.style.display = "block";
-    // เพิ่ม event listener ใหม่ให้กับปุ่ม dropfile หลังจากการรีเซ็ต
-    // ตรวจสอบว่า event listener ไม่ได้เพิ่มซ้ำหลายครั้ง
+   
     const newSelectFilesButton = document.querySelector(".dropfile");
     if (newSelectFilesButton) {
       newSelectFilesButton.addEventListener("click", handleSelectFilesClick);

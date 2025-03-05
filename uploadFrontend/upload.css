@@ -1,25 +1,22 @@
-
-
 * {
   box-sizing: border-box;
   font-family: "Atkinson Hyperlegible Mono", serif;
 }
 
-body {
+/* body {
   height: 100vh;
-  width: 100%; /* หรือใช้ 100% สำหรับความกว้างที่เหมาะสม */
+  width: 100%;
   margin: 0;
-}
+} */
 
 
 
 .upload-container {
   display: flex;
-  justify-content: space-between;
-  height: 100vh; /* ใช้ความสูงของหน้าจอ */
-  color: #3d3d3d;
-  background-color: #f6dcde;
-  position: relative;
+    justify-content: space-between;
+    height: 1024px;
+    color: #3d3d3d;
+    background-color: #f6dcde;
 }
 
 .left{
@@ -31,7 +28,10 @@ body {
     background-color: #fff;
     padding-top: 2rem;
 }
-
+.right{
+  width: 1081px;
+  height: 1024px;
+}
 
 .up-profile,
 .up-upload,
@@ -135,8 +135,8 @@ body {
 
 
 .showfile {
-  width: 900px;
-  height: 460px;
+  width: 992px;
+  height: 550px;
   background-color: #f9bec3;
   border-radius: 20px;
   overflow: scroll;
@@ -176,13 +176,13 @@ body {
   font-weight: bold;
   color: #3d3d3d;
   background-color: #fffdec;
+  
 }
 #upload:hover {
   background-color: #f37199;
   color: #fff;
   transition: background-color 0.3s, color 0.3s;
 }
-
 #cancelButton{
   height: 55px;
   width: 155px;
@@ -198,3 +198,4 @@ body {
   color: #fff;
   transition: background-color 0.3s, color 0.3s;
 }
+
