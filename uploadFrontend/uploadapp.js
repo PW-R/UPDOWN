@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const fileInput = document.getElementById("formFiles");
+  const cancelButton = document.getElementById("cancelButton"); // ปุ่ม Cancel
 
   async function addFile() {
     if (!fileInput) {
@@ -142,5 +143,25 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       console.error("No file selected");
     }
+  });
+  function handleSelectFilesClick() {
+    console.log("Select Files button clicked");
+    fileInput.click(); // เปิด dialog สำหรับเลือกไฟล์
+  }
+// ฟังก์ชันที่ใช้รีเซ็ตเมื่อกด Cancel
+  cancelButton.addEventListener("click", () => {
+   // รีเซ็ต input file
+    fileInput.value = "";
+   // รีเซ็ตการแสดงตัวอย่างไฟล์
+    fileDisplay.innerHTML = '<button class="dropfile" style="margin-top: 12rem;">Select Files</button>';
+    // แสดงปุ่ม Select Files
+    selectFilesButton.style.display = "block";
+    // เพิ่ม event listener ใหม่ให้กับปุ่ม dropfile หลังจากการรีเซ็ต
+    // ตรวจสอบว่า event listener ไม่ได้เพิ่มซ้ำหลายครั้ง
+    const newSelectFilesButton = document.querySelector(".dropfile");
+    if (newSelectFilesButton) {
+      newSelectFilesButton.addEventListener("click", handleSelectFilesClick);
+     }
+ console.log("File selection has been cancelled.");
   });
 });
